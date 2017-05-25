@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="028d2347-c1df-4900-a363-a402387dd9bd" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>The Unicode Font Tool allows you to organize a set of images against the Unicode specification and export that result out to be used elsewhere. The Unicode specification is a system by which written languages are separated into blocks which contain addressable cells, representing characters (ex. "A", "B", "C") or actions (ex. escape sequences). The Unicode Font Tool allows for this process by creating XML documents that represent logical font objects, which can contain colors (ex. "pink", "grey", "orange"), sizes (ex. "10", "20", "30"), and variants (ex. "Regular", "Bold", "Italic").</para>
+    </introduction>
+    <section address="Introduction">
+      <title>Introduction</title>
+      <content>
+        <para>Overall, fonts in this tool have two distinct organizational sections: colors and sizes. Of the two, sizes are the more important. Defining a size is a way to reference a set of base images that represent characters in the Unicode specification. Each size is further defined to have a list of variants.</para>
+        <para>Variants and colors both allow the base images in a size to be subjected to a series of non-destructive effects. Variants define effects that should happen only in reference to the base images of a particular size, while colors define general effects that should happen after variants are processed. Strictly speaking, there is no limitation to which effects can be used, but, as variant-level effects happen before color-level effects, there are effects that are more suited to be applied in certain contexts than in others.</para>
+        <para>Once a font at least has a size with base images attached, the font can be exported. For transit or backup purposes, the "ZIP File" export option should be used, as it yields a single file, which is easily shared or stored away. For use with the Panda3D game engine, the "EGG File" export path should be used. Because this export path emits all combinations of the font (sizes by variants by colors), it may yield many files, but it will at least yield the main EGG font model and its associated texture. Furthermore, the generated EGG files are documented, and, where possible, pixel coordinates have been used.</para>
+      </content>
+    </section>
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

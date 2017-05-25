@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="90063f3a-d3bb-48b7-b36d-3b18a6fa083c" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This section covers the available actions of the "View" menu.</para>
+			<mediaLink>
+				<image xlink:href="View"/>
+			</mediaLink>
+		</introduction>
+		<section address="AvailableActions">
+			<title>Available Actions</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Proofing Tool</legacyBold>: Launch a window to display a virtual keyboard and display area, allowing for appropriate typography checks.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

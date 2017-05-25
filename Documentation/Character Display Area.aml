@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="747cf8a8-808f-4d90-9d91-2e1cb1c216b1" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This section covers the available actions inside the context of the character display area.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Character-Display-Area"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="MouseActions">
+			<title>Mouse Actions</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Click (Base Image Button)</legacyBold>: Shows the base image associated with the active character in the active size. Changes to the width, ascension, or advancement of the given character are stored on the base image in this mode.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Click (Effective Image Button)</legacyBold>: Shows the base image with the effects in the active size and active variant applied. Changes to the width, ascension, or advancement of the given character are stoerd as effect directives on the active variant in the active size.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Mouse Wheel</legacyBold>: Zoom in or out in reference to the active character.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerConceptualDocument>
+</topic>

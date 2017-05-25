@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="6d46dcc7-514e-4d9b-b483-5e72c79f7322" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Font Tool's basic interface is split into six main areas. In order of importance, they are: the character display area, the block display area, the pager area, the main program tool strip, the toolbar area, and the status bar.</para>
+		</introduction>
+		<section address="CharacterDisplay">
+			<title>Character Display Area</title>
+			<content>
+				<autoOutline />
+				<para>The character display area is responsible for showing the visual representation of a given character in a given size. For instance, if the character "A" were selected in the block display area, this area would show the image representing the character in the font. However, this process requires there to actually be an image associated with the given character in the given size to show anything. Once there is an appropriate image associated with the character, this area also allows the user to see how the character will actually look in the context of the given variant. For instance, the character "A" may have a very mutable base image that only becomes interesting in the actual context of a variant; this value-adding process is accomplished by associating automated image effects (like shadowing) with a given variant.</para>
+			</content>
+		</section>
+		<section address="BlockDisplay">
+			<title>Block Display Area</title>
+			<content>
+				<autoOutline />
+				<para>The block display shows a collection of ordered, clickable boxes that represent the characters in a given Unicode block. Initially, this area is set to the first Unicode block in the specification, which is "Basic Latin", showing greyed-out images for each of the printable characters in the block. These greyed-out images represent non-realized characters in the given font size. A realized character is simply a character that has a base image associated with it in a given size. To realize a character, there are several options available. First, right-clicking a character's box, hovering over "Realize", and selecting "Default" will re-render the greyed-out image in black, using it to realize the character. Second, right-clicking a character's box and selecting "Browse" will prompt for an image to use to realize the character. Finally, the character can be unrealized by right-clicking the character's box and selecting "Clear". As a note, right-clicking the background area that contains the character boxes provides block-level realization and unrealization methods.</para>
+			</content>
+		</section>
+		<section address="Pager">
+			<title>Pager Area</title>
+			<content>
+				<autoOutline />
+				<para>The pager area is located in the lower-left corner of the main program. It provides access to the other characters in the block, provided the number of characters in the Unicode block exceed the limit of the pager. The pager's limit directly affects the behavior of the block display area.</para>
+			</content>
+		</section>
+		<section address="ToolStrip">
+			<title>Tool Strip Area</title>
+			<content>
+				<autoOutline />
+				<para>The tool strip area is located in the upper-left corner of the main program. It provides access to basic file operations, display windows, and the program credits.</para>
+			</content>
+		</section>
+		<section address="Toolbar">
+			<title>Toolbar Area</title>
+			<content>
+				<autoOutline />
+				<para>The toolbar area is located directly to the right of the main program tool strip area. It contains the controls that determine which part of the active font is being edited. Starting from the left and going right, the areas are: the font, then the size, then the variant, then the color, and then the Unicode block. </para>
+			</content>
+		</section>
+		<section address="StatusBar">
+			<title>Status Bar</title>
+			<content>
+				<autoOutline />
+				<para>The status bar is located at the bottom edge of the interface. Because some actions may take a long time to actually accomplish, the status bar is used to display information related to the current progress of those operations.</para>
+			</content>
+		</section>
+		<relatedTopics>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

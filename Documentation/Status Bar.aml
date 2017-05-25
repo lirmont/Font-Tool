@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="eabe1087-15cf-4dfd-9d03-73e88340b8b4" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This section enumerates the various status messages issued by this program.</para>
+		</introduction>
+		<section address="Messages">
+			<title>Messages</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyItalic>Ready.</legacyItalic>: This message may be present after any other action is completed.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyItalic>Realizing Glyphs: number/total-in-block.</legacyItalic>: This message may be present as the result of a "Realize Block" action, tracking the lengthy process of extracting images from an existing font.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyItalic>Exporting Font-Name (export number/total exports): Variant-Name Size-In-Pixelspx</legacyItalic>: This message may be present during exporting processes where no colored effects are used, indicating which variant and size are currently being exported.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyItalic>Exporting Font-Name (export number/total exports): Color-Name Variant-Name Size-In-Pixelspx</legacyItalic>: This message may be present during exporting processes, indicating which variant, color, and size are currently being exported.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyItalic>Exporting "Font-Name" to ZIP file: file.zip</legacyItalic>: This message may be present while exporting a font to a zip file, indicating the output file.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyItalic>Copying exported fonts to output directory...</legacyItalic>: This message may be present near the completion of the exporting process, where files are copied from a temporary user directory to the pre-specified output directory.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyItalic>Deleting temporary workspace folder...</legacyItalic>: This message may be present at the completion of the exporting process, when temporary files are deleted.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

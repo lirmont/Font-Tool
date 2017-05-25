@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="c9406ff8-5b7a-4d69-8f9e-b24ec7b7cf45" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Editing an existing variant to an existing font size in the application can be accomplished through this feature. Variants are a collection of traceable effects.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Edit-Variant"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="EffectsContextMenu">
+			<title>Effects Context Menu</title>
+			<content>
+				<para>Right-clicking the effects area exposes the following context menu actions:</para>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Add Effect</legacyBold>: This feature adds a new effect to the stack.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Edit Effect</legacyBold>: This feature edits an existing effect in the stack.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Move Effect Up</legacyBold>: This feature moves an effect ahead of other effects.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Move Effect Down</legacyBold>: This feature moves an effect after other effects.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Remove Effect</legacyBold>: This feature removes an existing effect.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerConceptualDocument>
+</topic>

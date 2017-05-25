@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="d1201d28-cfe5-4fcb-b484-bcc512088757" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This section covers the available information inside the context of the Unicode Coverage Report feature. Information presented here is pulled from the Common Locale Data Repository (CLDR), which is copyrighted by Unicode, Inc. Do not use this portion of the software if you do not agree to the following copyright notice: <link xlink:href="0d408a65-4a34-41e3-95a3-4d99555f9b30" />.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="View-Coverage-Report"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="UnicodeBlocks">
+			<title>Unicode Blocks</title>
+			<content>
+				<para>
+					This section of the report lists the number of Unicode blocks the font size has some manner of data regarding. Clicking the number opens the: <link xlink:href="5de79c56-8a30-4962-8139-e667614dbc90" />.
+				</para>
+			</content>
+		</section>
+		<section address="UnicodeScripts">
+			<title>Scripts</title>
+			<content>
+				<para>
+					<mediaLink>
+						<image placement="center" xlink:href="Unicode-Coverage-Report-Viewer-Scripts"/>
+					</mediaLink>
+				</para>
+				<para>
+					Languages are written using scripts. Languages rarely use whole scripts, usually opting for a smaller subset of a script (or scripts) instead.
+				</para>
+			</content>
+		</section>
+		<section address="UnicodeTerritories">
+			<title>Territories</title>
+			<content>
+				<para>
+					<mediaLink>
+						<image placement="center" xlink:href="Unicode-Coverage-Report-Viewer-Territories"/>
+					</mediaLink>
+				</para>
+				<para>
+					Earth, categorized by regions, further categorized by countries.
+				</para>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerConceptualDocument>
+</topic>

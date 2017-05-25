@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="bdd33e7b-bf2b-4b09-b5fb-f09815e2ad3d" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This section covers the available actions inside the context of the pager area.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Pager-Area"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="PagerContextMenu">
+			<title>Pager Context Menu</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Set Pager Limit</legacyBold>: Exposes a feature for setting the number of characters displayed per page.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerConceptualDocument>
+</topic>

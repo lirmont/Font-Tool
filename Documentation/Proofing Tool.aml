@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="801e4d30-7e32-46a1-92b0-61cb5083efa4" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>The proofing tool is designed to allow for an independent verification of a given font variant and color in reference to itself. It is divided into two separate areas: the virtual keyboard and the display area.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Proofing-Tool"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="VirtualKeyboard">
+			<title>Virtual Keyboard</title>
+			<content>
+				<para>This area allows for the use of any character in any language block defined by the Unicode specification, especially those that cannot be typed through the use of a naturalized keyboard. For instance, this virtual keyboard allows you to type domino tiles (as defined by the Unicode specification), whereas a naturalized keyboard would require you to input a control sequence representing such a character.</para>
+				<para>The virtual keyboard also listens for naturalized input. In short, typing while the proofing tool has focus will result in the transmission of the typed characters into the string displayed by the proofing tool. Special input (ex. "backspace", "delete", "left", "right") is used to traverse the string of text displayed in the display area.</para>
+			</content>
+		</section>
+		<section address="DisplayArea">
+			<title>Display Area</title>
+			<content>
+				<para>This area displays a string of text in the given size, variant, and color. Additionally, it provides buttons and a context menu that can be used to further manipulate the area.</para>
+				<para>There are 5 buttons provided by the display area: Plus, Minus, Images, Point-Overlay, Geometry, and Overlap. The first two control the level of zooming the display area uses; these buttons share their functionality with the mouse wheel. The other buttons control how the string of text is displayed. The images button represents the font as it will be regularly displayed. The point-overlay button represents the font with vertices and edges laid over it. The geometry button represents the font as a series of display regions that represent the characters. The overlap button marks the overlapping areas (in red) on top of the geometry mode.</para>
+				<para>The context menu provides 5 basic operations: Copy, Paste, Save, Export, and Clear. The copy option generally allows for the string of text to be copied into the clipboard. The paste option generally allows for a string of text to be copied into the displayed string. The save option allows for the current string to be stored at an application level; a saved string of text will not be lost upon closing the proofing tool. The export option generally allows for the string to be saved outside of the application. The clear option clears the displayed string, but it does not automatically save over the saved string of text.</para>
+			</content>
+		</section>
+		<relatedTopics>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

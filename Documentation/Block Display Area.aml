@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="8b5119cb-f61b-4a94-964d-e6e8ab14616e" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This section covers the available actions inside the context of the block display area.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Block-Display-Area"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="CharacterBoxSpecificContextMenu">
+			<title>Character Box Context Menu</title>
+			<content>
+				<para>
+					<mediaLink>
+						<image placement="center" xlink:href="Block-Display-Area-Character-Context"/>
+					</mediaLink>
+				</para>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Realize</legacyBold>: Opens a drop-down list of character realization options. The character will be realized in the selected font.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Edit</legacyBold>: Opens the base image of an already realized character using the "edit" verb. Updates to the image file are automatically checked after this point, resulting in the reloading of just that one character.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Browse</legacyBold>: Opens an image file prompt, using a successfully selected file as a base image for the given character in the active size. The image is copied (not referenced), so further changes to the image file will have to be re
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Clear</legacyBold>: Deletes the character image from the active size.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Remove</legacyBold>: Deletes the character from the active size.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<section address="UnicodeBlockSpecificContextMenu">
+			<title>Unicode Block Context Menu</title>
+			<content>
+				<para>
+					<mediaLink>
+						<image placement="center" xlink:href="Block-Display-Area-Context"/>
+					</mediaLink>
+				</para>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Realize Block</legacyBold>: Opens a drop-down list of block realization options. All the unrealized characters in the block will be realized in the selected font.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Clear</legacyBold>: Deletes all the characters in the block from the active size.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics/>
+	</developerConceptualDocument>
+</topic>

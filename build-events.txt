@@ -1,0 +1,1 @@
+xcopy /i /e /s /y /f "$(ProjectDir)fonts\Gallione's Garrulity" "$(TargetDir)fonts\Gallione's Garrulity"

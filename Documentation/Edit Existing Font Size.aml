@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="97b3c319-8019-4e84-abac-25748a769fd1" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Editing an existing size in an existing font in the application can be accomplished through this feature. Sizes are a collection of base images and variants.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Edit-Variant"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="VariantsContextMenu">
+			<title>Variants Context Menu</title>
+			<content>
+				<para>Right-clicking the variants area exposes the following context menu actions:</para>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Add Variant</legacyBold>: This feature adds a new variant to the size.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Edit Variant</legacyBold>: This feature edits an existing variant in the size.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Remove Variant</legacyBold>: This feature removes an existing variant from a size.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerConceptualDocument>
+</topic>

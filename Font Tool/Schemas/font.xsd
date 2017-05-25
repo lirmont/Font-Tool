@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="http://darkabstraction.com/schemas/font.xsd" xmlns:mstns="http://darkabstraction.com/schemas/font.xsd" xmlns="http://darkabstraction.com/schemas/font.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="font">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="colors" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="color" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="effects" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                  </xs:sequence>
+                  <xs:attribute name="name" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sizes" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="size" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="characters" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="character" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="comment" form="unqualified" type="xs:string" />
+                              <xs:attribute name="code" form="unqualified" type="xs:string" />
+                              <xs:attribute name="offset-width" form="unqualified" type="xs:string" />
+                              <xs:attribute name="offset-y" form="unqualified" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="variants" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="variant" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="effects" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="effect" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="apply-to-characters" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                                            <xs:element name="parameters" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="value" nillable="true" minOccurs="0" maxOccurs="1">
+                                                          <xs:complexType>
+                                                            <xs:simpleContent msdata:ColumnName="value_Text" msdata:Ordinal="1">
+                                                              <xs:extension base="xs:string">
+                                                                <xs:attribute name="value" form="unqualified" type="xs:string" />
+                                                              </xs:extension>
+                                                            </xs:simpleContent>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                      <xs:attribute name="name" form="unqualified" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="tracer" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="configuration" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                      <xs:attribute name="dilation" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="line-smoothing" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="interpolate-sharp-corners-by" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="pixel-smoothing" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="solidify-by" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="inverted-normals" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="x-offset" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="y-offset" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="z-offset" form="unqualified" type="xs:string" />
+                                                      <xs:attribute name="fill-edges" form="unqualified" type="xs:string" />
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="starts-new-layer" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="expects-base-image" form="unqualified" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="name" form="unqualified" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="default-width" form="unqualified" type="xs:string" />
+                  <xs:attribute name="target-descent" form="unqualified" type="xs:string" />
+                  <xs:attribute name="value" form="unqualified" type="xs:string" />
+                  <xs:attribute name="target-ascent" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

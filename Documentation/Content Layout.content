@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="028d2347-c1df-4900-a363-a402387dd9bd" visible="True" title="Introduction" tocTitle="Introduction" />
+  <Topic id="6d46dcc7-514e-4d9b-b483-5e72c79f7322" visible="True" title="Basic Interface" tocTitle="Basic Interface">
+    <Topic id="747cf8a8-808f-4d90-9d91-2e1cb1c216b1" visible="True" title="Character Display Area" tocTitle="Character Display Area" />
+    <Topic id="8b5119cb-f61b-4a94-964d-e6e8ab14616e" visible="True" title="Block Display Area" tocTitle="Block Display Area" />
+    <Topic id="bdd33e7b-bf2b-4b09-b5fb-f09815e2ad3d" visible="True" />
+    <Topic id="ea6e437e-daab-4db7-8139-3ba559dd658c" visible="True" title="Main Tool Strip" tocTitle="Main Tool Strip">
+      <Topic id="cf7c0a92-02de-439b-9537-5d3cbca4055d" visible="True" isExpanded="true" title="File" tocTitle="File">
+        <Topic id="3dae2a8c-f964-47db-859d-429caff6395c" visible="True" isExpanded="true">
+          <Topic id="d705776c-9eb8-4861-bb08-fdcaf7905d79" visible="True" />
+          <Topic id="a1213ed6-aae7-4b3b-ad86-e9a1fd721204" visible="True" />
+          <Topic id="bfdca13a-e0ad-4b84-9cc7-b1d3809b663f" visible="True" isExpanded="true">
+            <Topic id="aeae6c13-35fe-455a-8924-a7a1d01a6541" visible="True" />
+            <Topic id="c9406ff8-5b7a-4d69-8f9e-b24ec7b7cf45" visible="True" />
+          </Topic>
+          <Topic id="97b3c319-8019-4e84-abac-25748a769fd1" visible="True" />
+          <Topic id="d1201d28-cfe5-4fcb-b484-bcc512088757" visible="True" isExpanded="true">
+            <Topic id="5de79c56-8a30-4962-8139-e667614dbc90" visible="True" />
+          </Topic>
+        </Topic>
+        <Topic id="375e1888-51cb-4dcd-b879-2f6a8d86efa3" visible="True" />
+      </Topic>
+      <Topic id="90063f3a-d3bb-48b7-b36d-3b18a6fa083c" visible="True" title="View" tocTitle="View" />
+      <Topic id="e08560bb-0ee1-403f-92ae-8715ef81f3fb" visible="True" title="About" tocTitle="About" />
+    </Topic>
+    <Topic id="9e9c0215-0271-4d8c-ac33-7b5f5c29e039" visible="True" title="Toolbar" tocTitle="Toolbar" />
+    <Topic id="eabe1087-15cf-4dfd-9d03-73e88340b8b4" visible="True" title="Status Bar" tocTitle="Status Bar" />
+  </Topic>
+  <Topic id="452d7792-8a07-4745-b3f6-f3e873fc09c5" visible="True" isSelected="true" />
+  <Topic id="801e4d30-7e32-46a1-92b0-61cb5083efa4" visible="True" />
+  <Topic id="0d408a65-4a34-41e3-95a3-4d99555f9b30" visible="True" />
+</Topics>

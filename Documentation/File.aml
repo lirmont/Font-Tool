@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="cf7c0a92-02de-439b-9537-5d3cbca4055d" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This section covers available actions within the "File" menu.</para>
+			<mediaLink>
+				<image xlink:href="File"/>
+			</mediaLink>
+		</introduction>
+		<section address="AvailableActions">
+			<title>Available Actions</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>New</legacyBold>: Creates a new font.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Edit</legacyBold>: Edits the active font.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Save As...</legacyBold>: Copies the active font, storing it under a new name. As this option involves a potentially expensive copying operation, this option should not be used for simple renaming. Instead, use the editing feature for renaming.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Export To</legacyBold>: Opens a list of available export options.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Import</legacyBold>: Opens a list of available export options.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Exit</legacyBold>: Closes the program.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

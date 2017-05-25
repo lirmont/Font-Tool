@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="3dae2a8c-f964-47db-859d-429caff6395c" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>New fonts may be added to the application through this feature. A font must contain at least a name and a size with a valid variant.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Add-New-Font"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="ColorContextMenu">
+			<title>Color Context Menu</title>
+			<content>
+				<para>Right-clicking the color area exposes the following context menu actions:</para>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Add Color</legacyBold>: This feature adds a new set of effects with the intention of coloring the result of a variant.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Edit Color</legacyBold>: This feature edits an existing set of effects.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Remove Color</legacyBold>: This feature removes an existing set of effects.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<section address="SizeContextMenu">
+			<title>Size Context Menu</title>
+			<content>
+				<autoOutline />
+				<para>Right-clicking the size area exposes the following context menu actions:</para>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Add Size</legacyBold>: This feature adds a new description of base images to the font, labeled by a number, representing the size of the line-height (in pixels).
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Edit Size</legacyBold>: This feature edits a description of an existing set of base images.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Remove Size</legacyBold>: This feature permanently removes an existing set of base images.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>View Coverage Report</legacyBold>: View the Unicode coverage report for the selected font size.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerConceptualDocument>
+</topic>

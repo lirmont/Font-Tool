@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="9e9c0215-0271-4d8c-ac33-7b5f5c29e039" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>The sections covers the available actions of the toolbar area.</para>
+		</introduction>
+		<section address="AvailableActions">
+			<title>Available Actions (comboboxes)</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Select Font</legacyBold>: This control allows you to select which image-based font you want to use. This list is limited to the fonts you have stored in the application's directory.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Select Size</legacyBold>: This control allows you to select which size (available to the active font) you want to view or edit.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Select Variant</legacyBold>: This control allows you to select which variant (available to the active size) you want to view or edit.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Select Color</legacyBold>: This control allows you to select which color you want to view. Color stacks can only be edited by the font editing feature.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Unicode Block</legacyBold>: This control allows you to select an easily-managed subset of characters from the Unicode specification. The displayed character boxes are proxies for those characters.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

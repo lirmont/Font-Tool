@@ -1,0 +1,3357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF9E950F-3B14-4E4C-A127-53260A1B7874}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FontTool</RootNamespace>
+    <AssemblyName>Font Tool</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\AForge.NET\Framework\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\AForge.NET\Framework\Release\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>.\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO">
+      <HintPath>.\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddOrEditEffect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditEffect.Designer.cs">
+      <DependentUpon>AddOrEditEffect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrEditFont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditFont.Designer.cs">
+      <DependentUpon>AddOrEditFont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrEditFontSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditFontSize.Designer.cs">
+      <DependentUpon>AddOrEditFontSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrEditSizeVariant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditSizeVariant.Designer.cs">
+      <DependentUpon>AddOrEditSizeVariant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUnicodeCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUnicodeCharacter.Designer.cs">
+      <DependentUpon>AddUnicodeCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrEditBitmapColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrEditBitmapColor.Designer.cs">
+      <DependentUpon>AddOrEditBitmapColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportSettings.Designer.cs">
+      <DependentUpon>ExportSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuidedFontCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuidedFontCreation.Designer.cs">
+      <DependentUpon>GuidedFontCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenGLConfiguration.cs" />
+    <Compile Include="RenameGlyph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenameGlyph.Designer.cs">
+      <DependentUpon>RenameGlyph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Classes\BitmapFont\Effects\ClearToBaseImageEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\BorderEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\ItalicizeEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\IColoredEffectImageGeometryProvider.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\IColoredEffectImageProvider.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\IEffectImageGeometryProvider.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\IImageGeometryProvider.cs" />
+    <Compile Include="Support Classes\BitmapFont\Tracers\BitmapBoundaryTracer.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\CloseCropEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\GlyphShiftEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\MultiplyEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\IGeometryProvider.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\ITracer.cs" />
+    <Compile Include="Support Classes\BitmapFont\Tracers\BitmapTracer.cs" />
+    <Compile Include="Support Classes\BitmapFont\Tracers\Tracer.cs" />
+    <Compile Include="Support Classes\CanvasChangeAfterIncomingImageMetrics.cs" />
+    <Compile Include="Support Classes\Collections\CharactersByBlock.cs" />
+    <Compile Include="Support Classes\Collections\CharactersByEGGFile.cs" />
+    <Compile Include="Support Classes\Collections\DisplayListCollection.cs" />
+    <Compile Include="Support Classes\Collections\EffectQueue.cs" />
+    <Compile Include="Support Classes\Collections\TracedCharacterCollection.cs" />
+    <Compile Include="Support Classes\Collections\WidthMarkerCollection.cs" />
+    <Compile Include="Support Classes\OpenGL\CenteredDisplayList.cs" />
+    <Compile Include="Support Classes\OpenGL\DisplayList.cs" />
+    <Compile Include="Support Classes\TracedCharacter.cs" />
+    <Compile Include="Support Classes\TraceRequest.cs" />
+    <Compile Include="Support Classes\VirtualKeyboard\Letter.cs" />
+    <Compile Include="Support Controls\Info.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Support Controls\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\Configuration.cs" />
+    <Compile Include="Plugins\EmbeddedTextureBAMFont.cs" />
+    <Compile Include="Plugins\TextureBasedEGGFont.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\CombinedTouchOfColorEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\TouchOfColorEffect.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\aliasDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\%40base.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\%40decimal.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\%40default.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\%40long.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\%40short.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\abbreviationFallback.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\abbreviationFallbackChoice.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\abbreviationFallbackDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\abbreviationFallbackType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\afterCurrency.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\alias.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\alternateQuotationEnd.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\alternateQuotationEndDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\alternateQuotationStart.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\alternateQuotationStartDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\am.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\amDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\appendItem.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\appendItemDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\appendItems.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\appendItemsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\availableFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\availableFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\beforeCurrency.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\calendar.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\calendarDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\calendars.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\calendarsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\casingData.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\casingItem.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\casingItemOverride.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\characters.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\charactersDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\codePattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\codePatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\codePatterns.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\collation.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\collationDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\collations.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\collationsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\collationVisibility.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\commonlyUsed.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\commonlyUsedDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\commonlyUsedUsed.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\compoundUnit.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\compoundUnitDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\compoundUnitPattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\compoundUnitPatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\compressedIndexSeparator.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\compressedIndexSeparatorDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\context.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\contextTransform.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\contextTransformDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\contextTransforms.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\contextTransformsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\contextTransformType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\contextTransformUsage.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\contextTransformUsageDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cp.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencies.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currenciesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currency.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyDecimal.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyDecimalDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyFormatLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyFormatLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyFormatLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyGroup.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyGroupDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyMatch.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencyMatchDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\currencySpacing.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicName.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameContext.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameContextDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameContextType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameSet.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameSetDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameSets.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameSetsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameSetType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameWidth.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameWidthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\cyclicNameWidthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormatItem.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormatItemDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormatLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormatLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormatLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateRangePattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateRangePatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dates.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\datesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateTimeFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateTimeFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateTimeFormatLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateTimeFormatLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateTimeFormatLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateTimeFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dateTimeFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\day.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayAbbr.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayAbbrDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayContext.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayContextDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayContextType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\daylight.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\daylightDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayNames.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayNamesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriod.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriodContext.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriodContextDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriodDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriods.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriodsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriodWidth.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriodWidthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayPeriodWidthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\days.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\daysDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayWidth.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayWidthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\dayWidthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalFormatLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalFormatLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalFormatLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\decimalFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\defaultDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\defaultNumberingSystem.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\defaultNumberingSystemDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\delimiters.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\delimitersDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\displayName.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\displayNameCount.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\displayNameDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\durationUnit.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\durationUnitDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\durationUnitPattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\durationUnitPatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\ellipsis.cs" />
+    <Compile Include="Support Classes\CLDR\enums\ellipsisType.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\ellipsisDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\era.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eraAbbr.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eraAbbrDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eraDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eraNames.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eraNamesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eraNarrow.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eraNarrowDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\eras.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\erasDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exception.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exceptionDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exceptions.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exemplarCharacters.cs" />
+    <Compile Include="Support Classes\CLDR\enums\exemplarCharactersType.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\exemplarCharactersDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exemplarCity.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exemplarCityDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exponential.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\exponentialDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\extend.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fallback.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fallbackDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fallbackFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fallbackFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fallbackRegionFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fallbackRegionFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\field.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fieldDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fields.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fieldsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\fieldType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\finance.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\financeDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\firstDay.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\firstDayDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\first_non_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\first_primary_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\first_secondary_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\first_tertiary_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\first_trailing.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\first_variable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\generation.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\generic.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\genericDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\gmtFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\gmtFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\gmtZeroFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\gmtZeroFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\greatestDifference.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\greatestDifferenceDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\group.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\groupDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\height.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\heightDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\hourFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\hourFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\hoursFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\hoursFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\i.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\ic.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\identity.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\ldml.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\import.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabel.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabelAfter.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabelAfterDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabelBefore.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabelBeforeDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabelDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabelPriority.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexLabels.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexRangePattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexRangePatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\indexSeparator.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\indexSeparatorDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\infinity.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\infinityDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\inList.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\inListCasing.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\inListDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\insertBetween.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\insertBetweenDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\intervalFormatFallback.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\intervalFormatFallbackDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\intervalFormatItem.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\intervalFormatItemDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\intervalFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\intervalFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\inText.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\inTextDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\inTextType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\key.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\keyDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\keys.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\keysDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\language.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\languageDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\languages.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\languagesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\last.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\last_non_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\last_primary_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\last_secondary_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\last_tertiary_ignorable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\last_trailing.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\layout.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\layoutDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\ldmlDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\list.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listPattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listPatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listPatternPart.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listPatternPartDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listPatternPartType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listPatterns.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\listPatternsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeDisplayNames.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeDisplayNamesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeDisplayPattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeDisplayPatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeKeyTypePattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeKeyTypePatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localePattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localePatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeSeparator.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localeSeparatorDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localizedPatternChars.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\localizedPatternCharsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\longDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\mapping.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\mappingDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurement.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystem.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemChoice.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemName.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemNameDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemNames.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemNamesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemNameType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\measurementSystemType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\messages.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\messagesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\metadata.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\metazone.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\metazoneDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\minDays.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\minDaysCount.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\minDaysDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\minusSign.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\minusSignDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\miscPatterns.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\miscPatternsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\month.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthAbbr.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthAbbrDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthContext.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthContextDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthContextType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthNames.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthNamesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternContext.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternContextDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternContextType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatterns.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternWidth.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternWidthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthPatternWidthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\months.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthWidth.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthWidthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthWidthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\monthYeartype.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\moreInformation.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\moreInformationDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\nan.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\nanDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\native.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\nativeDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\nativeZeroDigit.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\nativeZeroDigitDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\noexpr.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\noexprDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\nostr.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\nostrDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\numbers.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\numbersDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\optimize.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\orientation.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\orientationCharacters.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\orientationDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\orientationLines.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\otherNumberingSystems.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\otherNumberingSystemsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\p.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\paperSize.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\paperSizeDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\pattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\patternCount.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\patternDigit.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\patternDigitDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\patternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\pc.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentFormatLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentFormatLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentFormatLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentSign.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\percentSignDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\perMille.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\perMilleDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\plusSign.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\plusSignDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\pm.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\pmDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\posix.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\posixDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\preferenceOrdering.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\preferenceOrderingDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\q.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\qc.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarter.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterContext.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterContextDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterContextType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarters.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quartersDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterWidth.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterWidthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quarterWidthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quotationEnd.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quotationEndDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quotationStart.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\quotationStartDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rbnf.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rbnfrule.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rbnfruleDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\reference.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\referenceDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\references.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\referenceStandard.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\regionFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\regionFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\regionFormatType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\relative.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\relativeDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\relativeTime.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\relativeTimeDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\relativeTimePattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\relativeTimePatternCount.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\relativeTimePatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\reset.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rule.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\ruleDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rules.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\ruleset.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rulesetAccess.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rulesetAllowsParsing.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rulesetDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rulesetGrouping.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\rulesetGroupingDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\s.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\sc.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scientificFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scientificFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scientificFormatLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scientificFormatLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scientificFormatLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scientificFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scientificFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\script.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\scriptDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scripts.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\scriptsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\segmentation.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\segmentationDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\segmentations.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\segmentationsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\segmentRules.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settings.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsAlternate.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsBackwards.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsCaseFirst.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsCaseLevel.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsHiraganaQuarternary.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsHiraganaQuaternary.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsNormalization.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsNumeric.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsPrivate.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\settingsStrength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\shortDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\singleCountries.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\singleCountriesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\special.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\standard.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\standardDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\stopwordList.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\stopwordListDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\stopwords.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\superscriptingExponent.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\superscriptingExponentDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\suppress_contractions.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\surroundingMatch.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\surroundingMatchDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\symbol.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\symbolChoice.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\symbolDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\symbols.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\symbolsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\t.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\tc.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\territories.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\territoriesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\territory.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\territoryDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeFormat.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeFormatDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeFormatLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeFormatLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeFormatLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeFormats.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeFormatsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeZoneNames.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\timeZoneNamesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\traditional.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\traditionalDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\transformName.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\transformNameDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\transformNames.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\transformNamesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\type.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\typeDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\types.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\typesDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unit.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitLength.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitLengthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitLengthType.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitPattern.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitPatternCount.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitPatternDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\units.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\unitsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\usesMetazone.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\usesMetazoneDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\variable.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\variableDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\variables.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\variant.cs" />
+    <Compile Include="Support Classes\CLDR\enums\drafts\variantDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\variants.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\variantsDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\version.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\week.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\weekDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\weekendEnd.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\weekendEndDay.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\weekendEndDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\weekendStart.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\weekendStartDay.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\weekendStartDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\width.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\widthDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\x.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\yesexpr.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\yesexprDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\yesstr.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\yesstrDraft.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\zone.cs" />
+    <Compile Include="Support Classes\CLDR\ldml\parts\zoneDraft.cs" />
+    <Compile Include="Support Classes\CLDR\supplementalData\ldmlSupplemental.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodeLanguageAndScript.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodeLanguageAndScriptCollection.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodeLanguageAndScripts.cs" />
+    <Compile Include="Support Controls\BlockPager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Support Controls\BlockPager.Designer.cs">
+      <DependentUpon>BlockPager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Classes\Collections\ImageDescriptionCollection.cs" />
+    <Compile Include="Support Classes\LastWriteChecker.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\VerticalLineEffect.cs" />
+    <Compile Include="Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Classes\BitmapFont\Effects\VerticalColorGradientEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\TransformEffect.cs" />
+    <Compile Include="Support Classes\FastBitmap.cs" />
+    <Compile Include="Plugins\EGGFont.cs" />
+    <Compile Include="Plugins\IPlugin.cs" />
+    <Compile Include="Plugins\ZippedFont.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\ReplaceColorEffect.cs" />
+    <Compile Include="SaveCopyAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveCopyAs.Designer.cs">
+      <DependentUpon>SaveCopyAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Controls\CollapsingGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Support Controls\CollapsingGroupBox.Designer.cs">
+      <DependentUpon>CollapsingGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Controls\ColorControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Support Controls\ColorControl.Designer.cs">
+      <DependentUpon>ColorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Controls\ColorControl\Color Spaces\CIELab.cs" />
+    <Compile Include="Support Controls\ColorControl\Color Spaces\CIEXYZ.cs" />
+    <Compile Include="Support Controls\ColorControl\Color Spaces\HSV.cs" />
+    <Compile Include="Support Controls\ColorControl\Color Spaces\RGB.cs" />
+    <Compile Include="Support Controls\ColorControl\ColorSpaceRelated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Support Controls\ColorControl\LayoutEngine.cs" />
+    <Compile Include="Support Controls\ColorControl\LayoutEngines\SquareLayoutEngine.cs" />
+    <Compile Include="Support Controls\ColorControl\Modes\ColorSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Support Controls\ColorControl\Modes\Palette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Support Controls\ColorControl\PalettedColor.cs" />
+    <Compile Include="Support Controls\ColorControl\Shapes.cs" />
+    <Compile Include="Support Controls\ColorControl\SupportFunctions.cs" />
+    <Compile Include="Support Controls\RealizationSettings\PointsToPixels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Support Controls\RealizationSettings\PointsToPixels.Designer.cs">
+      <DependentUpon>PointsToPixels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Controls\RealizationSettings\RealizationConfiguration.cs" />
+    <Compile Include="Support Controls\RealizationSettings\RealizationSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Support Controls\RealizationSettings\RealizationSettings.Designer.cs">
+      <DependentUpon>RealizationSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPageLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPageLimit.Designer.cs">
+      <DependentUpon>SetPageLimit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Functions\Export.cs" />
+    <Compile Include="Support Functions\Licensing.cs" />
+    <Compile Include="Support Classes\ParameterDescription.cs" />
+    <Compile Include="Support Classes\Shapes.cs" />
+    <Compile Include="Support Functions\Comparers.cs" />
+    <Compile Include="Support Classes\Collections\BitmapColorCollection.cs" />
+    <Compile Include="Support Classes\BitmapFont\BitmapColor.cs" />
+    <Compile Include="Support Functions\Serializers.cs" />
+    <Compile Include="Support Classes\OpenGL\ImageDescription.cs" />
+    <Compile Include="Support Functions\Bitmap.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\ShadowEffect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support Classes\BitmapFont\Effects\UpscaleEffect.cs" />
+    <Compile Include="Support Classes\Collections\DerivedCharacterCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support Classes\OffsetableUnicodeCharacter.cs" />
+    <Compile Include="Support Classes\DerivedCharacter.cs" />
+    <Compile Include="Support Classes\Collections\OffsetableUnicodeCharacterCollection.cs" />
+    <Compile Include="Support Functions\Fonts.cs" />
+    <Compile Include="Support Functions\KeyedCollections.cs" />
+    <Compile Include="Support Classes\Collections\ParameterCollection.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\EffectParameter.cs" />
+    <Compile Include="Support Classes\BitmapFont\BitmapEffect.cs" />
+    <Compile Include="Support Classes\BitmapFont\BitmapFont.cs" />
+    <Compile Include="Support Classes\BitmapFont\BitmapVariant.cs" />
+    <Compile Include="Support Classes\Collections\BitmapVariantCollection.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\IEffectImageProvider.cs" />
+    <Compile Include="Support Classes\BitmapFont\FontInSize.cs" />
+    <Compile Include="Support Classes\BitmapFont\Providers\IImageProvider.cs" />
+    <Compile Include="Support Classes\Collections\SizeCollection.cs" />
+    <Compile Include="Support Classes\Character.cs" />
+    <Compile Include="Support Classes\Collections\CharacterCollection.cs" />
+    <Compile Include="Support Controls\FontDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Support Controls\FontDisplay.Designer.cs">
+      <DependentUpon>FontDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support Classes\OpenGL\Texture.cs" />
+    <Compile Include="Support Controls\CharacterDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Support Controls\CharacterDisplay.Designer.cs">
+      <DependentUpon>CharacterDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Controls\CharacterViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Support Controls\CharacterViewer.Designer.cs">
+      <DependentUpon>CharacterViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Controls\GlyphPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Support Controls\GlyphPictureBox.Designer.cs">
+      <DependentUpon>GlyphPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Controls\MaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Support Controls\MaskedTextBox.Designer.cs">
+      <DependentUpon>MaskedTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Classes\Unicode\UnicodeBlock.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodeBlocks.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodeCharacter.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodePrivateFontCollection.cs" />
+    <Compile Include="Support Controls\ToolStripSpringTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Support Functions\File.cs" />
+    <Compile Include="Support Classes\BitmapFont\Effects\WidenEffect.cs" />
+    <Compile Include="Support Classes\XML\XmlColor.cs" />
+    <Compile Include="Support Functions\OpenGL.cs" />
+    <Compile Include="Support Functions\Web.cs" />
+    <Compile Include="Support Functions\XML.cs" />
+    <Compile Include="Support Classes\Collections\UlongCollection.cs" />
+    <Compile Include="Support Functions\Text.cs" />
+    <Compile Include="SupportFunctions.cs" />
+    <Compile Include="Trace\Clipper\clipper.cs" />
+    <Compile Include="Trace\DilateAndErodeFilter.cs" />
+    <Compile Include="Trace\Edge.cs" />
+    <Compile Include="Trace\MarchingSquares.cs" />
+    <Compile Include="Trace\Outbound\Triangle.cs" />
+    <Compile Include="Trace\Outbound\Vertex.cs" />
+    <Compile Include="Trace\Pass.cs" />
+    <Compile Include="Trace\PolyLine.cs" />
+    <Compile Include="Trace\ReferenceContainer.cs" />
+    <Compile Include="Trace\SupportFunctions.cs" />
+    <Compile Include="Trace\TraceConfiguration.cs" />
+    <Compile Include="Trace\Tracing.cs" />
+    <Compile Include="Trace\Outbound\TrianglesCollection.cs" />
+    <Compile Include="Trace\Triangle\Behavior.cs" />
+    <Compile Include="Trace\Triangle\Data\BadSubseg.cs" />
+    <Compile Include="Trace\Triangle\Data\BadTriangle.cs" />
+    <Compile Include="Trace\Triangle\Data\BadTriQueue.cs" />
+    <Compile Include="Trace\Triangle\Data\Osub.cs" />
+    <Compile Include="Trace\Triangle\Data\Otri.cs" />
+    <Compile Include="Trace\Triangle\Data\Segment.cs" />
+    <Compile Include="Trace\Triangle\Data\Triangle.cs" />
+    <Compile Include="Trace\Triangle\Enums.cs" />
+    <Compile Include="Trace\Triangle\ExtensionAttribute.cs" />
+    <Compile Include="Trace\Triangle\Geometry\Edge.cs" />
+    <Compile Include="Trace\Triangle\Geometry\IEdge.cs" />
+    <Compile Include="Trace\Triangle\Geometry\IPolygon.cs" />
+    <Compile Include="Trace\Triangle\Geometry\IPolygonExtensions.cs" />
+    <Compile Include="Trace\Triangle\Geometry\ISegment.cs" />
+    <Compile Include="Trace\Triangle\Geometry\ITriangle.cs" />
+    <Compile Include="Trace\Triangle\Geometry\Point.cs" />
+    <Compile Include="Trace\Triangle\Geometry\Polygon.cs" />
+    <Compile Include="Trace\Triangle\Geometry\Rectangle.cs" />
+    <Compile Include="Trace\Triangle\Geometry\RegionPointer.cs" />
+    <Compile Include="Trace\Triangle\Geometry\Vertex.cs" />
+    <Compile Include="Trace\Triangle\IO\DebugWriter.cs" />
+    <Compile Include="Trace\Triangle\IO\FileProcessor.cs" />
+    <Compile Include="Trace\Triangle\IO\IFileFormat.cs" />
+    <Compile Include="Trace\Triangle\IO\IMeshFormat.cs" />
+    <Compile Include="Trace\Triangle\IO\InputTriangle.cs" />
+    <Compile Include="Trace\Triangle\IO\IPolygonFormat.cs" />
+    <Compile Include="Trace\Triangle\IO\TriangleFormat.cs" />
+    <Compile Include="Trace\Triangle\IO\TriangleReader.cs" />
+    <Compile Include="Trace\Triangle\IO\TriangleWriter.cs" />
+    <Compile Include="Trace\Triangle\Log.cs" />
+    <Compile Include="Trace\Triangle\Logging\ILog.cs" />
+    <Compile Include="Trace\Triangle\Logging\ILogItem.cs" />
+    <Compile Include="Trace\Triangle\Logging\LogItem.cs" />
+    <Compile Include="Trace\Triangle\Mesh.cs" />
+    <Compile Include="Trace\Triangle\Meshing\Algorithm\Dwyer.cs" />
+    <Compile Include="Trace\Triangle\Meshing\Algorithm\Incremental.cs" />
+    <Compile Include="Trace\Triangle\Meshing\Algorithm\SweepLine.cs" />
+    <Compile Include="Trace\Triangle\Meshing\ConstraintMesher.cs" />
+    <Compile Include="Trace\Triangle\Meshing\ConstraintOptions.cs" />
+    <Compile Include="Trace\Triangle\Meshing\Converter.cs" />
+    <Compile Include="Trace\Triangle\Meshing\GenericMesher.cs" />
+    <Compile Include="Trace\Triangle\Meshing\IConstraintMesher.cs" />
+    <Compile Include="Trace\Triangle\Meshing\IMesh.cs" />
+    <Compile Include="Trace\Triangle\Meshing\IQualityMesher.cs" />
+    <Compile Include="Trace\Triangle\Meshing\Iterators\EdgeIterator.cs" />
+    <Compile Include="Trace\Triangle\Meshing\Iterators\RegionIterator.cs" />
+    <Compile Include="Trace\Triangle\Meshing\ITriangulator.cs" />
+    <Compile Include="Trace\Triangle\Meshing\QualityMesher.cs" />
+    <Compile Include="Trace\Triangle\Meshing\QualityOptions.cs" />
+    <Compile Include="Trace\Triangle\MeshValidator.cs" />
+    <Compile Include="Trace\Triangle\NewLocation.cs" />
+    <Compile Include="Trace\Triangle\RobustPredicates.cs" />
+    <Compile Include="Trace\Triangle\Sampler.cs" />
+    <Compile Include="Trace\Triangle\Smoothing\ISmoother.cs" />
+    <Compile Include="Trace\Triangle\Smoothing\SimpleSmoother.cs" />
+    <Compile Include="Trace\Triangle\Tools\AdjacencyMatrix.cs" />
+    <Compile Include="Trace\Triangle\Tools\CuthillMcKee.cs" />
+    <Compile Include="Trace\Triangle\Tools\PointSorter.cs" />
+    <Compile Include="Trace\Triangle\Tools\QuadTree.cs" />
+    <Compile Include="Trace\Triangle\Tools\QualityMeasure.cs" />
+    <Compile Include="Trace\Triangle\Tools\Statistic.cs" />
+    <Compile Include="Trace\Triangle\TriangleLocator.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\BoundedVoronoi.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\DCEL\Face.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\DCEL\HalfEdge.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\DCEL\Vertex.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\Legacy\BoundedVoronoiLegacy.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\Legacy\IVoronoi.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\Legacy\SimpleVoronoi.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\Legacy\VoronoiRegion.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\StandardVoronoi.cs" />
+    <Compile Include="Trace\Triangle\Voronoi\VoronoiBase.cs" />
+    <Compile Include="UnicodeBlockCoverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnicodeBlockCoverage.Designer.cs">
+      <DependentUpon>UnicodeBlockCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnicodeCoverageReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnicodeCoverageReportViewer.Designer.cs">
+      <DependentUpon>UnicodeCoverageReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Support Classes\Unicode\UnicodeScript.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodeScriptCollection.cs" />
+    <Compile Include="Support Classes\Unicode\UnicodeScripts.cs" />
+    <Compile Include="Support Classes\OpenGL\VertexBuffer.cs" />
+    <Compile Include="VirtualKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VirtualKeyboard.Handlers.cs">
+      <DependentUpon>VirtualKeyboard.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VirtualKeyboard.Designer.cs">
+      <DependentUpon>VirtualKeyboard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddOrEditEffect.resx">
+      <DependentUpon>AddOrEditEffect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrEditFont.resx">
+      <DependentUpon>AddOrEditFont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrEditFontSize.resx">
+      <DependentUpon>AddOrEditFontSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrEditSizeVariant.resx">
+      <DependentUpon>AddOrEditSizeVariant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUnicodeCharacter.resx">
+      <DependentUpon>AddUnicodeCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrEditBitmapColor.resx">
+      <DependentUpon>AddOrEditBitmapColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportSettings.resx">
+      <DependentUpon>ExportSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuidedFontCreation.resx">
+      <DependentUpon>GuidedFontCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameGlyph.resx">
+      <DependentUpon>RenameGlyph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Support Controls\BlockPager.resx">
+      <DependentUpon>BlockPager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveCopyAs.resx">
+      <DependentUpon>SaveCopyAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Support Controls\ColorControl.resx">
+      <DependentUpon>ColorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Support Controls\FontDisplay.resx">
+      <DependentUpon>FontDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Support Controls\GlyphPictureBox.resx">
+      <DependentUpon>GlyphPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Support Controls\RealizationSettings\PointsToPixels.resx">
+      <DependentUpon>PointsToPixels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Support Controls\RealizationSettings\RealizationSettings.resx">
+      <DependentUpon>RealizationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPageLimit.resx">
+      <DependentUpon>SetPageLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnicodeBlockCoverage.resx">
+      <DependentUpon>UnicodeBlockCoverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnicodeCoverageReportViewer.resx">
+      <DependentUpon>UnicodeCoverageReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VirtualKeyboard.resx">
+      <DependentUpon>VirtualKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="CLDR\common\dtd\ldml.dtd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="CLDR\common\dtd\ldmlSupplemental.dtd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Documentation.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Schemas\font.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="fonts\SortedFont.xslt">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="CLDR\apache-license.txt" />
+    <Content Include="CLDR\common\main\ca_ES_VALENCIA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ff_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ff_GN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ff_MR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fy_NL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ug.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ug_Arab.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ug_Arab_CN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\supplemental\supplementalData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\icu-license.html" />
+    <Content Include="CLDR\common\main\aa.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\aa_DJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\aa_ER.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\aa_ET.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\af.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\af_NA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\af_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\agq.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\agq_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ak.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ak_GH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\am.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\am_ET.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_001.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_AE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_BH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_DJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_DZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_EG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_EH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_ER.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_IL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_IQ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_JO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_KM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_KW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_LB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_LY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_MA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_MR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_OM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_PS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_QA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_SA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_SD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_SO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_SS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_SY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_TD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_TN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ar_YE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\as.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\asa.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\asa_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ast.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ast_ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\as_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\az.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\az_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\az_Cyrl_AZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\az_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\az_Latn_AZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bas.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bas_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\be.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bem.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bem_ZM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bez.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bez_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\be_BY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bg_BG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bm_ML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bn_BD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bn_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bo_CN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bo_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\br.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\brx.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\brx_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\br_FR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bs.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bs_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bs_Cyrl_BA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bs_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\bs_Latn_BA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\byn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\byn_ER.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ca.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ca_AD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ca_ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ca_FR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ca_IT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\cgg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\cgg_UG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\chr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\chr_US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\cs.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\cs_CZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\cy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\cy_GB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\da.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dav.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dav_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\da_DK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\da_GL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\de.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\de_AT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\de_BE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\de_CH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\de_DE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\de_LI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\de_LU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dje.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dje_NE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dua.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dua_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dyo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dyo_SN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dz.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\dz_BT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ebu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ebu_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ee.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ee_GH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ee_TG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\el.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\el_CY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\el_GR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CLDR\common\main\en_001.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_150.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_AG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_AI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_AS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_AU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_BB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_BE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_BM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_BS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_BW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_BZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_CA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_CC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_CK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_CX.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_DG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_DM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_Dsrt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_Dsrt_US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_ER.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_FJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_FK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_FM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_GY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_HK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_IE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_IM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_IO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_JE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_JM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_KI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_KN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_KY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_LC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_LR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_LS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_MW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_NA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_NF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_NG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_NR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_NU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_NZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_PG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_PH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_PK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_PN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_PR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_PW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_RW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SX.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_SZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_TC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_TK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_TO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_TT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_TV.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_UG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_UM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_US_POSIX.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_VC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_VG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_VI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_VU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_WS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_ZM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\en_ZW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\eo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\eo_001.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_419.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_AR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_BO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_CL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_CO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_CR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_CU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_DO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_EA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_EC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_GQ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_GT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_HN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_IC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_MX.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_NI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_PA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_PE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_PH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_PR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_PY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_SV.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_UY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\es_VE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\et.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\et_EE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\eu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\eu_ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ewo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ewo_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fa.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fa_AF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fa_IR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ff.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ff_SN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fil.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fil_PH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fi_FI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fo_FO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_BE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_BF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_BI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_BJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_BL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_CA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_CD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_CF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_CG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_CH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_CI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_DJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_DZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_FR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_GA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_GF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_GN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_GP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_GQ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_HT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_KM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_LU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_MA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_MC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_MF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_MG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_ML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_MQ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_MR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_MU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_NC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_NE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_PF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_PM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_RE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_RW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_SC.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_SN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_SY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_TD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_TG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_TN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_VU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_WF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fr_YT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fur.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\fur_IT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ga.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ga_IE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gd.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gd_GB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gl_ES.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gsw.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gsw_CH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gsw_LI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\guz.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\guz_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gu_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gv.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\gv_IM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ha.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\haw.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\haw_US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ha_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ha_Latn_GH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ha_Latn_NE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ha_Latn_NG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\he.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\he_IL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hi_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hr_BA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hr_HR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hu_HU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\hy_AM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ia.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ia_FR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\id.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\id_ID.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ig_NG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ii.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ii_CN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\is.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\is_IS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\it.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\it_CH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\it_IT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\it_SM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ja.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ja_JP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\jgo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\jgo_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\jmc.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\jmc_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ka.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kab.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kab_DZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kam.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kam_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ka_GE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kde.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kde_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kea.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kea_CV.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\khq.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\khq_ML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ki.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ki_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kk.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kkj.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kkj_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kk_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kk_Cyrl_KZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kln.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kln_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kl_GL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\km.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\km_KH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kn_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ko.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kok.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kok_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ko_KP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ko_KR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ks.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ksb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ksb_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ksf.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ksf_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ksh.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ksh_DE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ks_Arab.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ks_Arab_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kw.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\kw_GB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ky.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ky_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ky_Cyrl_KG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lag_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lg_UG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lkt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lkt_US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ln.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ln_AO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ln_CD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ln_CF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ln_CG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lo_LA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lt_LT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\luo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\luo_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\luy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\luy_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lu_CD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lv.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\lv_LV.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mas.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mas_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mas_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mer.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mer_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mfe.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mfe_MU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mgh.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mgh_MZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mgo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mgo_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mg_MG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mk.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mk_MK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ml.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ml_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mn_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mn_Cyrl_MN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mr_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ms.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ms_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ms_Latn_BN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ms_Latn_MY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ms_Latn_SG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mt_MT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mua.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\mua_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\my.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\my_MM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\naq.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\naq_NA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nb_NO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nb_SJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nd.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nd_ZW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ne.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ne_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ne_NP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl_AW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl_BE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl_BQ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl_CW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl_NL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl_SR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nl_SX.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nmg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nmg_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nnh.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nnh_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nn_NO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nr_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nso.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nso_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nus.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nus_SD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nyn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\nyn_UG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\om.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\om_ET.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\om_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\or.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\or_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\os.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\os_GE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\os_RU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pa.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pa_Arab.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pa_Arab_PK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pa_Guru.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pa_Guru_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pl_PL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ps.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ps_AF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_AO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_BR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_CV.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_GW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_MO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_MZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_PT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_ST.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\pt_TL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rm_CH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rn_BI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ro.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rof.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rof_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\root.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ro_MD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ro_RO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ru.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ru_BY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ru_KG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ru_KZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ru_MD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ru_RU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ru_UA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rw.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rwk.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rwk_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\rw_RW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sah.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sah_RU.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\saq.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\saq_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sbp.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sbp_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\se.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\seh.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\seh_MZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ses.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ses_ML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\se_FI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\se_NO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sg_CF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\shi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\shi_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\shi_Latn_MA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\shi_Tfng.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\shi_Tfng_MA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\si.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\si_LK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sk.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sk_SK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sl_SI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sn_ZW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\so.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\so_DJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\so_ET.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\so_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\so_SO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sq.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sq_AL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sq_MK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sq_XK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Cyrl_BA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Cyrl_ME.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Cyrl_RS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Cyrl_XK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Latn_BA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Latn_ME.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Latn_RS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sr_Latn_XK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ss.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ssy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ssy_ER.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ss_SZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ss_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\st.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\st_LS.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\st_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sv.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sv_AX.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sv_FI.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sv_SE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sw.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\swc.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\swc_CD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sw_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sw_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\sw_UG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ta.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ta_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ta_LK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ta_MY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ta_SG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\te.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\teo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\teo_KE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\teo_UG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\te_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tg_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tg_Cyrl_TJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\th.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\th_TH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ti.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tig_ER.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ti_ER.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ti_ET.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tn_BW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tn_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\to.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\to_TO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tr_CY.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tr_TR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ts_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\twq.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\twq_NE.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tzm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tzm_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\tzm_Latn_MA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uk.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uk_UA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ur.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ur_IN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ur_PK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uz.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uz_Arab.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uz_Arab_AF.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uz_Cyrl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uz_Cyrl_UZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uz_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\uz_Latn_UZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vai.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vai_Latn.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vai_Latn_LR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vai_Vaii.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vai_Vaii_LR.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ve.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\ve_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vi_VN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vo_001.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vun.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\vun_TZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\wae.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\wae_CH.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\wal.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\wal_ET.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\xh.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\xh_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\xog.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\xog_UG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\yav.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\yav_CM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\yo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\yo_BJ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\yo_NG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zgh.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zgh_MA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hans.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hans_CN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hans_HK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hans_MO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hans_SG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hant_HK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hant_MO.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zh_Hant_TW.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\common\main\zu_ZA.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CLDR\unicode-license.txt" />
+    <None Include="images\space.png" />
+    <None Include="images\left.png" />
+    <None Include="images\right.png" />
+    <None Include="images\up.png" />
+    <None Include="images\down.png" />
+    <None Include="images\backspace.png" />
+    <Content Include="logo.ico" />
+    <Content Include="Unicode Specification\language_script_raw.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\Scripts.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\unifont-5-1.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\CODE2001.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\ANDAGII.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\Aegyptus.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\Akkadian.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\Analecta.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\Symbola.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\LastResort.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\Eeyek.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\Aegean.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Support Controls\ColorControl\Color Control.chm" />
+    <Content Include="Unicode Specification\Avestamanus.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Support Controls\CharacterDisplay.resx">
+      <DependentUpon>CharacterDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Support Controls\CharacterViewer.resx">
+      <DependentUpon>CharacterViewer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\transparent-background.png" />
+    <Content Include="Unicode Specification\blocks.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\data.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unicode Specification\LastResort End-User License Agreement.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

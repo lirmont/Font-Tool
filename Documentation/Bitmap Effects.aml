@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="452d7792-8a07-4745-b3f6-f3e873fc09c5" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Bitmap effects are deterministic, non-destructive changes that can be used to alter the base images of a font.</para>
+		</introduction>
+		<section address="GeneralUses">
+			<title>General Uses</title>
+			<content>
+				<para>
+					Effects can be used to provide variety to base images, altering the color, shape, and metrics of a character. In an effect stack (like a variant or color contains), they can achieve a wide variety of font design goals without needing to manually diverge from a given set of base images. Pursuant to that, effects can be optionally applied to just a specific set of characters, allowing considerations for specific character design needs. An example of a scoped effect is the ability to chop off the right or left side of a highly decorated Arabic character so that the character can connect with the characters its next to.
+				</para>
+			</content>
+		</section>
+		<section address="Tracing">
+			<title>Tracing (Experimental)</title>
+			<content>
+				<para>
+					To display an image in a 3D context, it's necessary to provide geometry. By default, the application provides geometry automatically if no requests to trace any layers of an effects stack are made. The geometry provided in these cases is minimal. Minimal geometry is provided in the form of a rectangle. This geometry is the result of both the fallback choice and the choice "Image Boundary". Alternatively, the image can be more closely traced, providing much more detailed geometry, which can also be made into something like a solid object.
+				</para>
+				<para>
+					Trace requests can only be made on effects in the variant effect stack. Effects in color effect stacks defer effect trace requests, tracing the last color effect instead of the effect the trace request occurred at. Effects in color effect stacks are appended to the end of every layer, as defined by the variant effect stack.
+				</para>
+				<para>
+					As to the experimental nature of this feature, one of the libaries used to accomplish this task is not thread-safe. Specifically, this applies to the "Image" tracing option. It may unexpectedly fail. It is recommended that program activity is limited during lengthy exports of any kind.
+				</para>
+			</content>
+		</section>
+		<section address="Effects">
+			<title>Effects</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Clear to Base Image</legacyBold>: This effect reloads the base image for a given character, replacing the current stack. This effect mimics the first step of composting and is not required to be added manually to the beginning of an effects stack.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Vertical Color Gradient</legacyBold>: This effect provides a ascent-aware gradient effect, picking colors based on distance from the base-line of the font.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Glyph Shift/Transform</legacyBold>: This effect allows changes to ascent, advance, and character width.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Border</legacyBold>: This effect draws a 1-pixel border around non-alpha pixels of an image.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Shadow</legacyBold>: This effect draws a solid-color copy of the image beneath an existing image.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Multiply</legacyBold>: This effect multiplies all pixels of an image by a solid color.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Replace Color</legacyBold>: This effect replaces all pixels matching some color with some other color.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Italicize</legacyBold>: This effect pushes sections of an image away from the center of the image.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Widen</legacyBold>: This effect cuts an image into halves, repeating the resulting edge to widen the image horizontally.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Touch of Color</legacyBold>: This effect blends a color based on a direction and how many steps are requested. On the first step, the specified color is used. On subsequent steps, a smaller and smaller percent of the color is blended.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Combined Touch of Color</legacyBold>: This effect performs a touch of color on the 4 available directions.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Close Crop</legacyBold>: This effect cuts off a specified section of the image.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics/>
+	</developerConceptualDocument>
+</topic>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which
+         assemblies to include from solution and project documentation
+         sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e823b043-8276-4208-9cdf-262802993103}</ProjectGuid>
+    <SHFBSchemaVersion>2015.6.5.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual
+         Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>Documentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <ApiFilter />
+    <ComponentConfigurations />
+    <DocumentationSources />
+    <HelpAttributes />
+    <NamespaceSummaries />
+    <PlugInConfigurations>
+      <PlugInConfig id="Additional Content Only" enabled="True">
+        <configuration />
+      </PlugInConfig>
+    </PlugInConfigurations>
+    <BuildLogFile />
+    <HtmlHelp1xCompilerPath />
+    <HtmlHelp2xCompilerPath />
+    <SandcastlePath />
+    <WorkingPath />
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <FrameworkVersion>.NET Framework 2.0</FrameworkVersion>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <CleanIntermediates>True</CleanIntermediates>
+    <SyntaxFilters>None</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <PresentationStyle>VS2010</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>Unicode Font Tool</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <WebsiteSdkLinkType>None</WebsiteSdkLinkType>
+    <HtmlSdkLinkType>None</HtmlSdkLinkType>
+    <IncludeFavorites>False</IncludeFavorites>
+    <BinaryTOC>True</BinaryTOC>
+    <VisibleItems>None</VisibleItems>
+    <FeedbackEMailAddress>lirmont%40gmail.com</FeedbackEMailAddress>
+    <TransformComponentArguments>
+      <Argument Key="logoFile" Value="logo.png" />
+      <Argument Key="logoHeight" Value="" />
+      <Argument Key="logoWidth" Value="" />
+      <Argument Key="logoAltText" Value="" />
+      <Argument Key="logoPlacement" Value="above" />
+      <Argument Key="logoAlignment" Value="left" />
+    </TransformComponentArguments>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in
+       order for Visual Studio to perform the build.  The others are optional
+       common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <ContentLayout Include="Content Layout.content" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="About.aml" />
+    <None Include="Add New Color.aml" />
+    <None Include="Add New Font Size.aml" />
+    <None Include="Add New Font.aml" />
+    <None Include="Add New Variant.aml" />
+    <None Include="Basic Interface.aml" />
+    <None Include="Bitmap Effects.aml" />
+    <None Include="Block Display Area.aml" />
+    <None Include="Character Display Area.aml" />
+    <None Include="Edit Existing Color.aml" />
+    <None Include="Edit Existing Font Size.aml" />
+    <None Include="Edit Existing Variant.aml" />
+    <None Include="Edit Font.aml" />
+    <None Include="File.aml" />
+    <None Include="Introduction.aml" />
+    <None Include="Main Tool Strip.aml" />
+    <None Include="Pager Area.aml" />
+    <None Include="Proofing Tool.aml" />
+    <None Include="Status Bar.aml" />
+    <None Include="Toolbar.aml" />
+    <None Include="Unicode Block Coverage.aml" />
+    <None Include="Unicode Copyright Message.aml" />
+    <None Include="Unicode Coverage Report.aml" />
+    <None Include="View.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icons\" />
+    <Folder Include="Media" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\logo.png">
+      <ImageId>logo</ImageId>
+      <AlternateText>logo</AlternateText>
+    </Content>
+    <Image Include="Media\10px-formatted-blue.png">
+      <ImageId>10px-formatted-blue</ImageId>
+      <AlternateText>10px-formatted-blue</AlternateText>
+    </Image>
+    <Image Include="Media\10px-formatted-red.png">
+      <ImageId>10px-formatted-red</ImageId>
+      <AlternateText>10px-formatted-red</AlternateText>
+    </Image>
+    <Image Include="Media\10px-formatted.png">
+      <ImageId>10px-formatted</ImageId>
+      <AlternateText>10px-formatted</AlternateText>
+    </Image>
+    <Image Include="Media\10px-unformatted.png">
+      <ImageId>10px-unformatted</ImageId>
+      <AlternateText>10px-unformatted</AlternateText>
+    </Image>
+    <Image Include="Media\20px-formatted.png">
+      <ImageId>20px-formatted</ImageId>
+      <AlternateText>20px-formatted</AlternateText>
+    </Image>
+    <Image Include="Media\20px-unformatted.png">
+      <ImageId>20px-unformatted</ImageId>
+      <AlternateText>20px-unformatted</AlternateText>
+    </Image>
+    <Image Include="Media\Add-New-Color.png">
+      <ImageId>Add-New-Color</ImageId>
+      <AlternateText>Add-New-Color</AlternateText>
+    </Image>
+    <Image Include="Media\Add-New-Font-Size.png">
+      <ImageId>Add-New-Font-Size</ImageId>
+      <AlternateText>Add-New-Font-Size</AlternateText>
+    </Image>
+    <Image Include="Media\Add-New-Font.png">
+      <ImageId>Add-New-Font</ImageId>
+      <AlternateText>Add-New-Font</AlternateText>
+    </Image>
+    <Image Include="Media\Add-New-Variant.png">
+      <ImageId>Add-New-Variant</ImageId>
+      <AlternateText>Add-New-Variant</AlternateText>
+    </Image>
+    <Image Include="Media\Block-Display-Area-Character-Context.png">
+      <ImageId>Block-Display-Area-Character-Context</ImageId>
+      <AlternateText>Block-Display-Area-Character-Context</AlternateText>
+    </Image>
+    <Image Include="Media\Block-Display-Area-Context.png">
+      <ImageId>Block-Display-Area-Context</ImageId>
+      <AlternateText>Block-Display-Area-Context</AlternateText>
+    </Image>
+    <Image Include="Media\Block-Display-Area.png">
+      <ImageId>Block-Display-Area</ImageId>
+      <AlternateText>Block-Display-Area</AlternateText>
+    </Image>
+    <Image Include="Media\Character-Display-Area.png">
+      <ImageId>Character-Display-Area</ImageId>
+      <AlternateText>Character-Display-Area</AlternateText>
+    </Image>
+    <Image Include="Media\Edit-Color.png">
+      <ImageId>Edit-Color</ImageId>
+      <AlternateText>Edit-Color</AlternateText>
+    </Image>
+    <Image Include="Media\Edit-Font.png">
+      <ImageId>Edit-Font</ImageId>
+      <AlternateText>Edit-Font</AlternateText>
+    </Image>
+    <Image Include="Media\Edit-Variant.png">
+      <ImageId>Edit-Variant</ImageId>
+      <AlternateText>Edit-Variant</AlternateText>
+    </Image>
+    <Image Include="Media\Example-Usage.png">
+      <ImageId>Example-Usage</ImageId>
+      <AlternateText>Example-Usage</AlternateText>
+    </Image>
+    <Image Include="Media\Pager-Area.png">
+      <ImageId>Pager-Area</ImageId>
+      <AlternateText>Pager-Area</AlternateText>
+    </Image>
+    <Image Include="Media\Proofing-Tool.png">
+      <ImageId>Proofing-Tool</ImageId>
+      <AlternateText>Proofing-Tool</AlternateText>
+    </Image>
+    <Image Include="Media\Unicode-Block-Coverage.png">
+      <ImageId>Unicode-Block-Coverage</ImageId>
+      <AlternateText>Unicode-Block-Coverage</AlternateText>
+    </Image>
+    <Image Include="Media\Unicode-Coverage-Report-Viewer-Scripts.png">
+      <ImageId>Unicode-Coverage-Report-Viewer-Scripts</ImageId>
+      <AlternateText>Unicode-Coverage-Report-Viewer-Scripts</AlternateText>
+    </Image>
+    <Image Include="Media\Unicode-Coverage-Report-Viewer-Territories.png">
+      <ImageId>Unicode-Coverage-Report-Viewer-Territories</ImageId>
+      <AlternateText>Unicode-Coverage-Report-Viewer-Territories</AlternateText>
+    </Image>
+    <Image Include="Media\View-Coverage-Report.png">
+      <ImageId>View-Coverage-Report</ImageId>
+      <AlternateText>View-Coverage-Report</AlternateText>
+    </Image>
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+</Project>

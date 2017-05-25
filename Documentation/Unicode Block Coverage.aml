@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="5de79c56-8a30-4962-8139-e667614dbc90" revisionNumber="1">
+	<developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This feature provides a text representation of the font's coverage.</para>
+			<para>
+				<mediaLink>
+					<image placement="center" xlink:href="Unicode-Block-Coverage"/>
+				</mediaLink>
+			</para>
+		</introduction>
+		<section address="Options">
+			<title>Available Options</title>
+			<content>
+				<list class="ordered">
+					<listItem>
+						<para>
+							<legacyBold>Surround with Quotes</legacyBold>: This feature adds double-quotes around each block, pursuant to data transmission to programming languages.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Include Coverage</legacyBold>: This feature appends a percentage in parentheses.
+						</para>
+					</listItem>
+					<listItem>
+						<para>
+							<legacyBold>Include New Lines</legacyBold>: This feature further separates block names.
+						</para>
+					</listItem>
+				</list>
+			</content>
+		</section>
+		<relatedTopics />
+	</developerConceptualDocument>
+</topic>
