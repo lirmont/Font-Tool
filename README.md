@@ -6,7 +6,7 @@
 
 Create image-based fonts from regular fonts or supply your own images. Effects are applied in divided hierarchies.
 
-![Unicode Coverage](https://raw.githubusercontent.com/lirmont/Sprite-Animator/master/Documentation/Media/Unicode-Coverage-Report-Viewer-Scripts.png)
+![Unicode Coverage](https://raw.githubusercontent.com/lirmont/Font-Tool/master/Documentation/Media/Unicode-Coverage-Report-Viewer-Scripts.png)
 
 Among other things, check Unicode coverage of your font.
 
